@@ -16,10 +16,6 @@ app.get("/", (_req, res) => {
     res.send("Luke's API!");
 });
 
-app.get("/dbtest", (_req, res) => {
-    res.send("test");
-});
-
 app.use("/albums", albumsRouter);
 
 // Connect to DB
