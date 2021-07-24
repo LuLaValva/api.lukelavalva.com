@@ -1,17 +1,19 @@
 import mongoose, { Schema, Document } from "mongoose";
 
 export interface IRating extends Document {
-    groove: number;
-    art: number;
-    shareability: number;
-    complexity: number;
+    fun: number;
+    novelty: number;
+    variety: number;
+    depth: number;
+    emotion: number;
 }
 
 const RatingSchema: Schema = new Schema({
-    groove: { type: Number, required: true },
-    art: { type: Number, required: true },
-    shareablility: { type: Number, required: true },
-    complexity: { type: Number, required: true },
+    fun: { type: Number, required: true },
+    novelty: { type: Number, required: true },
+    variety: { type: Number, required: true },
+    depth: { type: Number, required: true },
+    emotion: { type: Number, required: true },
 });
 
 export interface IAlbum extends Document {
@@ -26,4 +28,4 @@ const AlbumSchema: Schema = new Schema({
     rating: { type: RatingSchema, required: false },
 });
 
-export default mongoose.model<IAlbum>("ratings", AlbumSchema);
+export default mongoose.model<IAlbum>("album-ratings", AlbumSchema);
