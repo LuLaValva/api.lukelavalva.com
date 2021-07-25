@@ -6,6 +6,8 @@ export interface IRating extends Document {
     variety: number;
     depth: number;
     emotion: number;
+    cohesion: number;
+    polish: number;
 }
 
 const RatingSchema: Schema = new Schema({
@@ -14,6 +16,8 @@ const RatingSchema: Schema = new Schema({
     variety: { type: Number, required: true },
     depth: { type: Number, required: true },
     emotion: { type: Number, required: true },
+    cohesion: { type: Number, required: true },
+    polish: { type: Number, required: true },
 });
 
 export interface IAlbum extends Document {
